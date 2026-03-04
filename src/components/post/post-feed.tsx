@@ -3,9 +3,9 @@ import Fallback from "../fallback";
 import Loader from "../loader";
 import PostItem from "./post-item";
 
-const { data, error, isPending } = usePostsData();
-
 export default function PostFeed() {
+  const { data, error, isPending } = usePostsData();
+
   if (error) return <Fallback />;
   if (isPending) return <Loader />;
 
